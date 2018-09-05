@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace DAL.Interface
 {
     public interface IRepository<T> : IDisposable
-        where T : class
+        where T : BaseEntity
     {
         IEnumerable<T> Find(Func<T, Boolean> predicate);
         T GetById(int id);

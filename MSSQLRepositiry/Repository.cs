@@ -1,4 +1,5 @@
-﻿using DAL.Interface;
+﻿using DAL;
+using DAL.Interface;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -6,8 +7,8 @@ using System.Linq;
 
 namespace Repository
 {
-    public class Repository<T> : IRepository<T> where T: class
-    {
+    public class Repository<T> where T: BaseEntity, IRepository<T>
+    { 
         private DbContext _db;
         private DbSet<T> _dbSet;
         private bool disposedValue = false;
