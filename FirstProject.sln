@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repository", "MSSQLRepositi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BLL", "BLL\BLL.csproj", "{EC922EF4-02C6-4A3E-BD8B-C652BB33D65A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication", "WebApplication\WebApplication.csproj", "{4A15548E-C41B-4A2E-A8DD-03F71468A70C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{EC922EF4-02C6-4A3E-BD8B-C652BB33D65A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC922EF4-02C6-4A3E-BD8B-C652BB33D65A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC922EF4-02C6-4A3E-BD8B-C652BB33D65A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A15548E-C41B-4A2E-A8DD-03F71468A70C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A15548E-C41B-4A2E-A8DD-03F71468A70C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A15548E-C41B-4A2E-A8DD-03F71468A70C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A15548E-C41B-4A2E-A8DD-03F71468A70C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

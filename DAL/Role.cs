@@ -1,4 +1,6 @@
-﻿namespace DAL
+﻿using System.Collections.Generic;
+
+namespace DAL
 {
     public class Role : BaseEntity
     {
