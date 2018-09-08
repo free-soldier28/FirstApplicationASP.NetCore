@@ -20,7 +20,7 @@ namespace WebApplication
         public void ConfigureServices(IServiceCollection services)
         {
             string connectionString = Configuration.GetConnectionString("DefaultConnection");
-            services.AddDbContext<DAL.AppDBContext>(options =>options.UseSqlServer(connectionString));
+            services.AddDbContextPool<DAL.AppDBContext>(options =>options.UseSqlServer(connectionString));
 
             services.AddMvc();
         }

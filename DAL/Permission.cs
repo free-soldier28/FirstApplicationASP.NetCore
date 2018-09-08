@@ -1,9 +1,11 @@
-﻿namespace DAL
+﻿using System.Collections.Generic;
+
+namespace DAL
 {
     public class Permission : BaseEntity
     {
         public string Name { get; set; }
 
-        public Role Role { get; set; }
+        public virtual ICollection<RolePermissions> RolePermissions { get; set; }
     }
 }

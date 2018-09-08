@@ -6,6 +6,6 @@ namespace DAL
     {
         public string Name { get; set; }
 
-        public virtual ICollection<Role> Roles { get; set; }
+        public virtual ICollection<UserRoles> UserRoles { get; set; }
     }
 }
