@@ -21,6 +21,8 @@ namespace WebApplication
         {
             string connectionString = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<DAL.AppDBContext>(options =>options.UseSqlServer(connectionString));
+
+            services.AddMvc();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -38,6 +40,7 @@ namespace WebApplication
 
             app.UseDefaultFiles();
             app.UseStaticFiles();
+            app.UseMvc();
 
             app.Run(async (context) =>
             {

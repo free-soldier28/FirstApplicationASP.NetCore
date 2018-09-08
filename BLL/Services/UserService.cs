@@ -20,8 +20,18 @@ namespace BLL.Services
 
         public IEnumerable<UserDTO> GetUsers()
         {
-            IEnumerable<UserDTO> users = _mapper.Map<IEnumerable<UserDTO>>(_repo.GetAll());
-            return users;
+            return _mapper.Map<IEnumerable<UserDTO>>(_repo.GetAll());
+        }
+
+        public UserDTO GetUser(int id)
+        {
+            UserDTO userDTO = null;
+
+            if(id != 0)
+            {
+                userDTO = _mapper.Map<UserDTO>(_repo.GetById(id));
+            }
+            return userDTO;
         }
 
         public void AddUser(UserDTO userDTO)
