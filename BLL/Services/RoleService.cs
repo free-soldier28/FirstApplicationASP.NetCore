@@ -24,6 +24,17 @@ namespace BLL.Services
            return roles;
         }
 
+        public RoleDTO GetRole(int id)
+        {
+            RoleDTO roleDTO = null;
+
+            if (id != 0)
+            {
+                roleDTO = _mapper.Map<RoleDTO>(_repo.GetById(id));
+            }
+            return roleDTO;
+        }
+
         public void AddRole(RoleDTO roleDTO)
         {
             if (roleDTO != null)
