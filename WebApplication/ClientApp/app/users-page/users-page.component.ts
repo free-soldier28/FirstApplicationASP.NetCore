@@ -9,7 +9,6 @@ import { User } from '../user/user';
 })
 
 export class UsersPageComponent implements OnInit {
-
     users: User[];  
     user: User = new User();  
     tableMode: boolean = true;         
