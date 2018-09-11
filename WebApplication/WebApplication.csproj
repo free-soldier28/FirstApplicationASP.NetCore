@@ -9,6 +9,8 @@
     <None Remove="ClientApp\app\app.component.ts" />
     <None Remove="ClientApp\app\app.module.ts" />
     <None Remove="ClientApp\app\home-page\home-page.component.ts" />
+    <None Remove="ClientApp\app\role\role.service.ts" />
+    <None Remove="ClientApp\app\role\role.ts" />
     <None Remove="ClientApp\app\user-page.component.ts" />
     <None Remove="ClientApp\app\user.service.ts" />
     <None Remove="ClientApp\app\user.ts" />
@@ -40,6 +42,8 @@
     <TypeScriptCompile Include="ClientApp\app\app.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\app.module.ts" />
     <TypeScriptCompile Include="ClientApp\app\home-page\home-page.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\role\role.service.ts" />
+    <TypeScriptCompile Include="ClientApp\app\role\role.ts" />
     <TypeScriptCompile Include="ClientApp\app\users-page\users-page.component.ts" />
     <TypeScriptCompile Include="ClientApp\app\user\user.service.ts" />
     <TypeScriptCompile Include="ClientApp\app\user\user.ts" />
