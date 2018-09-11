@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace BLL.DTO
+﻿namespace BLL.DTO
 {
     public class UserDTO : BaseDTO
     {
-
+        //public RoleDTO roleDTO { get; set; }
     }
 }

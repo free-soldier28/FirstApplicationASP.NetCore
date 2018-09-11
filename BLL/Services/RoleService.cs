@@ -2,7 +2,7 @@
 using BLL.DTO;
 using BLL.Interface;
 using DAL;
-using DAL.Interface;
+using Repository.Interface;
 using System.Collections.Generic;
 
 namespace BLL.Services

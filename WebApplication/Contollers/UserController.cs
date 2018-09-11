@@ -7,6 +7,7 @@ using WebApplication.Model;
 
 namespace WebApplication.Contollers
 {
+    [Route("/users")]
     public class UserController : Controller
     {
         private IUserService _userService;
@@ -15,22 +16,23 @@ namespace WebApplication.Contollers
         public UserController(IUserService userService, IMapper mapper)
         {
             _userService = userService;
+            _mapper = mapper;
         }
 
         [HttpGet]
-        public IEnumerable<User> Get()
+        public IEnumerable<UserViewModel> Get()
         {
-            return _mapper.Map<IEnumerable<User>>(_userService.GetUsers());
+            return _mapper.Map<IEnumerable<UserViewModel>>(_userService.GetUsers());
         }
 
         [HttpGet("{id}")]
-        public User Get(int id)
+        public UserViewModel Get(int id)
         {
-            return _mapper.Map<User>(_userService.GetUser(id));
+            return _mapper.Map<UserViewModel>(_userService.GetUser(id));
         }
 
         [HttpPost]
-        public IActionResult Post([FromBody]User user)
+        public IActionResult Post([FromBody]UserViewModel user)
         {
             if (ModelState.IsValid)
             {
@@ -41,7 +43,7 @@ namespace WebApplication.Contollers
         }
 
         [HttpPut("{id}")]
-        public IActionResult Put([FromBody]User user)
+        public IActionResult Put(int id, [FromBody]UserViewModel user)
         {
             if (ModelState.IsValid)
             {

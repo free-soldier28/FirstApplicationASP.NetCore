@@ -1,8 +1,12 @@
 {
   "version": "1.0.0",
-  "name": "asp.net",
+  "name": "angular",
   "private": true,
   "author": "Roman RChislou@outlook.com",
+  "scripts": {
+    "dev": "webpack-dev-server --hot --open",
+    "build": "webpack"
+  },
   "dependencies": {
     "@angular/common": "~6.0.0",
     "@angular/compiler": "~6.0.0",

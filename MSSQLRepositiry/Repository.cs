@@ -1,19 +1,20 @@
 ﻿using DAL;
-using DAL.Interface;
 using Microsoft.EntityFrameworkCore;
+using Repository.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace Repository
 {
-    public class Repository<T> where T: BaseEntity, IRepository<T>
-    { 
-        private DbContext _db;
+    public class Repository<T> : IRepository<T> where T : BaseEntity
+    {
+        private AppDBContext _db;
+
         private DbSet<T> _dbSet;
         private bool disposedValue = false;
 
-        public Repository(DbContext db)
+        public Repository(AppDBContext db)
         {
             _db = db;
             _dbSet = db.Set<T>();

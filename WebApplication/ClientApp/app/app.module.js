@@ -7,14 +7,32 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { UsersPageComponent } from './users-page/users-page.component';
+var appRoutes = [
+    { path: '', component: HomePageComponent },
+    { path: 'users', component: UsersPageComponent },
+    { path: '**', redirectTo: '/' }
+];
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         NgModule({
-            imports: [BrowserModule, FormsModule],
-            declarations: [AppComponent],
+            imports: [
+                BrowserModule,
+                FormsModule,
+                HttpClientModule,
+                RouterModule.forRoot(appRoutes)
+            ],
+            declarations: [
+                AppComponent,
+                HomePageComponent,
+                UsersPageComponent
+            ],
             bootstrap: [AppComponent]
         })
     ], AppModule);
