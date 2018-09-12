@@ -1,19 +1,23 @@
 ﻿import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user/user.service';
 import { User } from '../user/user';
+import { RoleService } from '../role/role.service';
+import { Role } from '../role/role';
 
 @Component({
     selector: 'users-page',
     templateUrl: './users-page.component.html',
-    providers: [UserService]
+    providers: [UserService, RoleService]
 })
 
 export class UsersPageComponent implements OnInit {
-    users: User[];  
-    user: User = new User();  
+    users: User[];
+    user: User = new User();
+    userRole: Role[];
+    role: Role = new Role();
     tableMode: boolean = true;         
 
-    constructor(private userService: UserService) { }
+    constructor(private userService: UserService, private roleService: RoleService) { }
 
     ngOnInit() {
         this.loadUsers();     
