@@ -1,7 +1,9 @@
-﻿namespace BLL.DTO
+﻿using System.Collections.Generic;
+
+namespace BLL.DTO
 {
     public class UserDTO : BaseDTO
     {
-        //public RoleDTO roleDTO { get; set; }
+        public IEnumerable<RoleDTO> rolesDTO { get; set; }
     }
 }

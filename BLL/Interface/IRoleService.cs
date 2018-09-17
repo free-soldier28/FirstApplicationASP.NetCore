@@ -5,6 +5,7 @@ namespace BLL.Interface
 {
     public interface IRoleService
     {
+        RoleDTO GetRole(int id);
         IEnumerable<RoleDTO> GetRoles();
         void AddRole(RoleDTO role);
         void EditRole(RoleDTO role);
